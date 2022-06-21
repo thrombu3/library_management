@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap-3.4.1-dist/css/bootstrap.min.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">价格最高的书</h1>
+        <a href="{% url 'index_view' %}"><h3 class="text-center">回到主页</h3></a>
+        <a href="{% url 'caozuo_view' %}"><h3 class="text-center">修改数据</h3></a>
+        <div class="col-md-8 col-md-offset-2">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>书名</th>
+                        <th>价格</th>
+                        <th>发售日期</th>
+                        <th>销量</th>
+                        <th>库存</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ outh_list.id }}</td>
+                        <td>{{ outh_list.title }}</td>
+                        <td>{{ outh_list.price }}</td>
+                        <td>{{ outh_list.publish_time }}</td>
+                        <td>{{ outh_list.xiaoliang }}</td>
+                        <td>{{ outh_list.kucun }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

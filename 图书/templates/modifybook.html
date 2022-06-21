@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap-3.4.1-dist/css/bootstrap.min.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">修改书籍信息</h1>
+        <div class="col-md-8 col-md-offset-2">
+            <form action="" method="post">
+                <p>价格:
+                    <input type="text" name="book_price" class="form-control" value="{{ update_list.price }}">
+                </p>
+                <p>库存:
+                    <input type="text" name="book_kucun" class="form-control" value="{{ update_list.kucun }}">
+                </p>
+                <p>销量:
+                    <input type="text" name="book_xiaoliang" class="form-control" value="{{ update_list.xiaoliang }}">
+                </p>
+                <p>
+                    <input type="submit" class="btn btn-success btn-block" value="确认更新数据">
+                </p>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

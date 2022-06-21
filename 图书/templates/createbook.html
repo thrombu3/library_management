@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap-3.4.1-dist/css/bootstrap.min.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">增加书籍</h1>
+        <div class="col-md-8 col-md-offset-2">
+            <form action="" method="post">
+                <p>书名:
+                    <input type="text" name="book_name" class="form-control">
+                </p>
+                <p>价格:
+                    <input type="text" name="book_price" class="form-control">
+                </p>
+                <p>销量:
+                    <input type="text" name="book_xiaoliang" class="form-control">
+                </p>
+                <p>库存:
+                    <input type="text" name="book_kucun" class="form-control">
+                </p>
+
+                <p>选择出版社:
+                    {% for msg in msg_list %}
+                    {{ msg.name }}:
+                        <input type="radio" name="chubanshe" value="{{ msg.name }}">
+                {% endfor %}
+                </p>
+                <p>
+                    <input type="submit" class="btn btn-block btn-success" value="确认增加">
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
